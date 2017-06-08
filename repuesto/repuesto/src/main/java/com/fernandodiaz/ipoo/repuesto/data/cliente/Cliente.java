@@ -1,122 +1,100 @@
-package com.fernandodiaz.ipoo.repuesto.data.cliente;
+package com.caseSeven.ipoo.cajeroAutomatico.datos.storage;
 
-// Inicio de la clase
-// nomenclatura: visibilidad class nombre de clase
+import java.util.List;
+
 public class Cliente {
 	
-	private int id;
-	private String nroDoc;
+	private long id;
 	private String tipoDoc;
-	private String nombre;
-	private String direccion;
-	private String telefono;
+	private String nroDoc;
 	private String password;
+	private String nombre;
 	
+	private List<Cuenta> cuenta;
+	private List<Tarjeta> tarjeta;
+	private List<Prestamo> prestamo;
 	
-	//Constructor 1
-	public Cliente(){ 
-	
+	public Cliente(){
+		
 	}
-	
-	
-	
-	//Constructor 2
-	public Cliente(int id, String nroDoc, String tipoDoc, String nombre, String direccion, String telefono,
-			String password) {
+
+	public Cliente(long id, String tipoDoc, String nroDoc, String password, String nombre, List<Cuenta> cuenta,
+			List<Tarjeta> tarjeta, List<Prestamo> prestamo) {
 		super();
 		this.id = id;
-		this.nroDoc = nroDoc;
 		this.tipoDoc = tipoDoc;
-		this.nombre = nombre;
-		this.direccion = direccion;
-		this.telefono = telefono;
+		this.nroDoc = nroDoc;
 		this.password = password;
+		this.nombre = nombre;
+		this.cuenta = cuenta;
+		this.tarjeta = tarjeta;
+		this.prestamo = prestamo;
 	}
 
-	//metodos
-
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-
-
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
-
-
-
-	public String getNroDoc() {
-		return nroDoc;
-	}
-
-
-
-	public void setNroDoc(String nroDoc) {
-		this.nroDoc = nroDoc;
-	}
-
-
 
 	public String getTipoDoc() {
 		return tipoDoc;
 	}
 
-
-
 	public void setTipoDoc(String tipoDoc) {
 		this.tipoDoc = tipoDoc;
 	}
 
-
-
-	public String getNombre() {
-		return nombre;
+	public String getNroDoc() {
+		return nroDoc;
 	}
 
-
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setNroDoc(String nroDoc) {
+		this.nroDoc = nroDoc;
 	}
-
-
-
-	public String getDireccion() {
-		return direccion;
-	}
-
-
-
-	public void setDireccion(String direccion) {
-		this.direccion = direccion;
-	}
-
-
-
-	public String getTelefono() {
-		return telefono;
-	}
-
-
-
-	public void setTelefono(String telefono) {
-		this.telefono = telefono;
-	}
-
-
 
 	public String getPassword() {
 		return password;
 	}
 
-
-
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public List<Cuenta> getCuenta() {
+		return cuenta;
+	}
+
+	public void setCuenta(List<Cuenta> cuenta) {
+		this.cuenta = cuenta;
+	}
+
+	public List<Tarjeta> getTarjeta() {
+		return tarjeta;
+	}
+
+	public void setTarjeta(List<Tarjeta> tarjeta) {
+		this.tarjeta = tarjeta;
+	}
+
+	public List<Prestamo> getPrestamo() {
+		return prestamo;
+	}
+
+	public void setPrestamo(List<Prestamo> prestamo) {
+		this.prestamo = prestamo;
+	}
 	
 	
+
 }
-//fin de la clase
